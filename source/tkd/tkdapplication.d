@@ -83,10 +83,8 @@ abstract class TkdApplication
 		// (using a local library and Tcl/Tk DLL's). So always set the current 
 		// working directory to that of the executable's. Tcl/Tk should then 
 		// always find it if it's there.
-		version (Windows)
-		{
-			thisExePath().dirName().chdir();
-		}
+
+		thisExePath().dirName().chdir();
 
 		this._tk = Tk.getInstance();
 
